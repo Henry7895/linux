@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090b0d">
+  <meta name="description" content="Henry Linux — terminal Linux simulé dans le navigateur">
+  <title>henry@linux — Terminal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app" class="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark">$_</div>
+        <div><strong>henry</strong><span>Linux Browser Terminal</span></div>
+      </div>
+      <div class="actions">
+        <button data-action="files" title="Explorateur de fichiers">▣</button>
+        <button data-action="processes" title="Processus">◈</button>
+        <button data-action="system" title="Système">◌</button>
+        <button data-action="network" title="Réseau">⌁</button>
+        <button data-action="search" title="Recherche Ctrl+F">⌕</button>
+        <button data-action="fullscreen" title="Plein écran">⛶</button>
+      </div>
+    </header>
+
+    <nav id="tabs" class="tabs"></nav>
+
+    <main class="workspace">
+      <section class="terminal-window">
+        <div class="titlebar">
+          <div class="window-dots"><i></i><i></i><i></i></div>
+          <div id="window-title" class="window-title">user@henry:/$</div>
+          <div class="sandbox">● sandbox</div>
+        </div>
+        <div id="terminal" class="terminal" tabindex="0"></div>
+        <div class="statusbar">
+          <span>▣ navigateur · aucune commande système réelle</span>
+          <span>Tab compléter · ↑↓ historique · Ctrl+L nettoyer · Ctrl+F rechercher</span>
+        </div>
+      </section>
+      <aside id="sidepanel" class="sidepanel hidden"></aside>
+    </main>
+
+    <footer class="footer">
+      <span>CPU 8 vCPU</span><span>RAM 16 GiB</span><span>DISK 128 GiB</span><span>eth0 192.168.1.42</span>
+      <span id="session-info" class="push">user@henry · /</span>
+    </footer>
+  </div>
+
+  <div id="modal" class="modal hidden"></div>
+  <script src="app.js"></script>
+</body>
+</html>
